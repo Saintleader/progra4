@@ -21,7 +21,6 @@ def tabla_de_datos(filtracion):
                    headers=['Número', 'Departamento', 'Municipio', 'Cultivo', 'Topologia', 'Ph', 'Potasio',
                             'Fósforo'], tablefmt='grid'))
 
-'''
-def tabla_medias(medias):
-    print(tabulate(medias,headers=['ph', 'potasio', 'fosforo'], tablefmt='grid'))
-'''
+
+def tabla_medianas(medias):
+    print(f'las medianas de cada fila son:\n{medias}')

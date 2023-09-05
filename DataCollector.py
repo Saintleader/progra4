@@ -16,8 +16,12 @@ def filtrar(consultado):
                                   'potasio_k_intercambiable_cmol_kg']]
     return datos_filtrados
 
-'''
-def medias(filtrados):
-    medias_filtradas = filtrados.mean()
+def convertir_a_flotante(filtrados):
+    medias_filtradas = filtrados[['ph_agua_suelo_2_5_1_0',
+                                  'f_sforo_p_bray_ii_mg_kg',
+                                  'potasio_k_intercambiable_cmol_kg']].astype('float64', errors='ignore')
     return medias_filtradas
-'''
+
+def medianas(df_medianas):
+    extraer_medianas = df_medianas.median(skipna=True)
+    return extraer_medianas
